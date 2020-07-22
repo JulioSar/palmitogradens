@@ -1,0 +1,26 @@
+.feature-box{
+
+    text-align: center;
+    transition: all .2s;
+
+    @include respond (phone){
+        &:not(:last-child){
+            margin-bottom: 10%;
+        }
+    }
+
+
+    &:hover{
+        transform:scale(1.03)translateY(-1.5rem);
+
+    }
+
+
+}
+
+.service-image{
+    border-radius: 100%;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 5%;
+}

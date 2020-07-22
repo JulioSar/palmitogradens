@@ -1,0 +1,115 @@
+.gallery-section{
+    
+    margin: 2%;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap:2rem;
+    transition: all 2s;
+    grid-template-areas:'img-1 img-2 img-3 img-3'
+                        'img-1 img-4 img-5 img-6'
+                        'img-7 img-7 img-8 img-6'
+                        
+                        'img-9 img-10 img-11 img-11'
+                        'img-9 img-12 img-13 img-14'
+                        'img-15 img-15 img-16 img-14'
+                        
+                        'img-17 img-18 img-19 img-19'
+                        'img-17 img-20 img-21 img-22'
+                        'img-23 img-23 img-24 img-22'
+                        
+                        'img-25 img-26 img-27 img-27'
+                        'img-25 img-28 img-29 img-29'
+                        ;
+
+    &__image{
+
+        width: 100%;
+        height: 25rem;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position:relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+    }
+
+    &__image::before{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top:0;
+        left:0;
+        background-color:rgba(0,0,0,.8);
+        opacity: 0;
+        transition: opacity .5s;
+    }
+
+    &__image:hover{
+        transform: scale(1.02)translateY(-.5rem);
+        box-shadow: 0 2.5rem 4rem rgba($color-black, .5);
+    }
+
+    &__image:hover > ion-icon,
+    &__image:hover::before{
+        
+        opacity:1;
+
+
+    }
+
+    &__image > ion-icon{
+
+        color: rgba(255,255,255,.6);
+        font-size: 3rem;
+        position:relative;
+        z-index: 100;
+        padding: 1rem 3rem;
+        border: 2px solod rgba(255,255,255,.6);
+        border-radius: 0.4rem;
+        opacity: 0;
+        transition:opacity .5s;
+    }
+
+    @include respond(phone){
+
+        grid-template-areas:'img-1 img-1 img-1 img-1'
+        'img-2 img-2 img-2 img-2'
+        'img-3 img-3 img-3 img-3'
+        'img-4 img-4 img-4 img-4'
+        'img-5 img-5 img-5 img-5'
+        'img-6 img-6 img-6 img-6'
+        'img-7 img-7 img-7 img-7'
+        'img-8 img-8 img-8 img-8'
+        'img-9 img-9 img-9 img-9'
+        'img-10 img-10 img-10 img-10'
+        'img-11 img-11 img-11 img-11'
+        'img-12 img-12 img-12 img-12'
+        'img-13 img-13 img-13 img-13'
+        'img-14 img-14 img-14 img-14'
+        'img-15 img-15 img-15 img-15'
+        'img-16 img-16 img-16 img-16'
+        'img-17 img-17 img-17 img-17'
+        'img-18 img-18 img-18 img-18'
+        'img-19 img-19 img-19 img-19'
+        'img-20 img-20 img-20 img-20'
+        'img-21 img-21 img-21 img-21'
+        'img-22 img-22 img-22 img-22'
+        'img-23 img-23 img-23 img-23'
+        'img-24 img-24 img-24 img-24'
+        'img-25 img-25 img-25 img-25'
+        'img-26 img-26 img-26 img-26'
+        'img-27 img-27 img-27 img-27'
+        'img-28 img-28 img-28 img-28'
+        'img-29 img-29 img-29 img-29'
+         ;
+
+    }
+    
+}
+
+
+

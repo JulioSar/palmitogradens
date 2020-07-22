@@ -1,0 +1,47 @@
+.row_grid{
+    max-width: $grid-width;
+    margin: 0 auto;
+
+
+
+    &:not(:last-child){
+        margin-bottom: $gutter-vertical;
+
+        @include respond(phone){
+            margin-bottom: 6rem;
+        }
+    }
+
+    @include respond(phone){
+        max-width: 50rem;
+    }
+
+    @include clearfix;
+
+    [class^="col-"]{
+        float: left;
+
+        &:not(:last-child){
+            margin-right: $gutter-horizontal;
+
+            @include respond(phone){
+                margin-right: 0;
+                margin-bottom: 6rem;
+            }
+        }
+
+        @include respond(phone){
+            width: 100% !important;
+        }
+    }
+
+    .col-1-of-2{
+        width: calc((100% - #{$gutter-horizontal})/2);
+
+    }
+
+}
+
+
+
+
